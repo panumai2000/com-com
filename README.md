@@ -11,7 +11,7 @@
 
 - has_many :items
 
-## Items テーブル
+## Comics テーブル
 
 | Column       | Type       | Options                       |
 | ------------ | ---------- | ----------------------------- |
