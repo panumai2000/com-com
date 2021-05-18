@@ -20,7 +20,7 @@
 | magazine_id  | integer    | null: false                   |
 | author       | string     | null: false                   |
 | number       | integer    | null: false                   |
-| end          | integer    | null: false                   |
+| end          | string     | null: false                   |
 | user         | references | null: false foreign_key: true |
 
 ### Association

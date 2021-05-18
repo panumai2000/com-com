@@ -1,0 +1,3 @@
+<%= form_with model:@comic, url:comics_path, local: true do |f| %>
+  <%= f.text_area :name, class:"comics-text", id:"name", placeholder:"マンガ名", maxlength:"40" %>
+<% end %>
