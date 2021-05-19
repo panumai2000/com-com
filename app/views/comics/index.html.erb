@@ -1,6 +1,35 @@
 <%= render "header" %>
 
+
 <%= link_to( new_comic_path, class: 'purchase-btn') do %>
   <span>マンガ登録</span>
 <% end %>
-
+<div class="comic-index">
+  <ul class='comic-lists'>
+    <% @comics.each do |comic| %>
+      <li class='list'>
+        <div class='comic-img-content'>
+          <%= image_tag comic.image, class: "comic-img"%>
+        </div>
+        <div>
+          <span>タイトル：<%= comic.name %></span>
+        </div>
+        <div>
+          <span>最新刊：<%= comic.number %>巻</span>
+        </div>
+        <div>
+          <span>作者：<%= comic.author %></span>
+        </div>
+        <div>
+          <span>雑誌：<%= comic.magazine.name %></span>
+        </div>
+        <div>
+          <span>ジャンル：<%= comic.genre.name %></span>
+        </div>
+        <div>
+          <%= comic.end %>
+        </div>
+      </li>
+    <% end %>
+  </ul>
+</div>

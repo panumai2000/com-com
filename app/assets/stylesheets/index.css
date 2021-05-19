@@ -1,0 +1,35 @@
+.comic-index{
+  background-color: #FFF;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10vh 0;
+}
+
+.comic-lists{
+  width: 100vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.comic-lists>.list {
+  width: 37vh;
+  padding: 1vw;
+  background-color: #FFF;
+}
+
+
+.comic-img-content {
+  position: relative;
+  
+}
+
+.comic-img {
+  width: 33vh;
+  height: 33vh;
+}
+
+
+
+

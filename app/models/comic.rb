@@ -9,7 +9,7 @@ class Comic < ApplicationRecord
   with_options presence: true do
     validates :name
     validates :author
-    validates :number
+    validates :number, numericality: true
     validates :end
 
     with_options numericality: { other_than: 1 } do
