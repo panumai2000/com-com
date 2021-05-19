@@ -1,3 +1,10 @@
-<%= form_with model:@comic, url:comics_path, local: true do |f| %>
-  <%= f.text_area :name, class:"comics-text", id:"name", placeholder:"マンガ名", maxlength:"40" %>
-<% end %>
+<%= form_with model: @comic, url:comics_path, local: true do |form| %>
+      <%= form.text_field :name, placeholder: "name" %>
+      <%#= form.text_field :image, placeholder: "Image Url" %>
+      <%= form.text_area :genre_id, placeholder: "ジャンル" %>
+      <%= form.text_area :magazine_id, placeholder: "雑誌" %>
+      <%= form.text_field :author, placeholder: "作者名" %>
+      <%= form.text_field :number, placeholder: "巻数" %>
+      <%= form.text_field :end, placeholder: "完" %>
+      <%= form.submit "SEND" %>
+      <% end %>
