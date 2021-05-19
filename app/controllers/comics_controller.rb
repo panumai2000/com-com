@@ -18,7 +18,7 @@ class ComicsController < ApplicationController
 
   private
   def comic_params
-    params.require(:comic).permit(:name, :genre_id, :magazine_id, :author, :number, :end).merge(user_id: current_user.id)
+    params.require(:comic).permit(:image, :name, :genre_id, :magazine_id, :author, :number, :end).merge(user_id: current_user.id)
   end
 
 end
