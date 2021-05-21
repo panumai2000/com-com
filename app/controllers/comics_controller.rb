@@ -1,4 +1,5 @@
 class ComicsController < ApplicationController
+  before_action :authenticate_user!, only: [:new, :create, :edit, :update]
   before_action :set_comic, only: [:show, :edit, :update, :destroy]
 
   def index
