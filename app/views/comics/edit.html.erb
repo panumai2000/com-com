@@ -1,0 +1,11 @@
+<%= form_with model: @comic, url:comic_path, local: true do |f| %>
+  <%= f.text_field :name, placeholder: "name" %>
+  <%= f.file_field :image, id:"image" %>
+  <%= f.collection_select(:genre_id, Genre.all, :id, :name, {}, {class:"genre-select"}) %>
+  <%= f.collection_select(:magazine_id, Magazine.all, :id, :name, {}, {class:"magazine-select"}) %>
+  <%= f.text_field :author, placeholder: "作者名" %>
+  <%= f.text_field :number, placeholder: "巻数" %>
+  <%= f.select :end, [["完",],["未完"]]%>
+  <%= f.submit "SEND" %>
+  <%=link_to 'もどる',comic_path , class:"back-btn" %>
+<% end %>

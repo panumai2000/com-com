@@ -1,0 +1,36 @@
+<div class="comic-show">
+  <div class="comic-box">
+    <%= image_tag @comic.image, class:"comic-box-img" %>
+    <table class="detail-table">
+      <tbody>
+        <tr>
+          <th class="detail-comic">タイトル</th>
+          <td class="detail-value"><%= @comic.name %></td>
+        </tr>
+        <tr>
+          <th class="detail-comic">最新刊</th>
+          <td class="detail-value"><%= @comic.number %></td>
+        </tr>
+        <tr>
+          <th class="detail-comic">作者</th>
+          <td class="detail-value"><%= @comic.author %></td>
+        </tr>
+        <tr>
+          <th class="detail-comic">雑誌</th>
+          <td class="detail-value"><%= @comic.magazine.name %></td>
+        </tr>
+        <tr>
+          <th class="detail-comic">ジャンル</th>
+          <td class="detail-value"><%= @comic.genre.name %></td>
+        </tr>
+        <tr>
+          <th class="detail-comic">完／未完</th>
+          <td class="detail-value"><%= @comic.end %></td>
+        </tr>
+              </tbody>
+    </table>
+    <%= link_to "編集", edit_comic_path(@comic.id), method: :get, class: "comic-red-btn" %>
+     <%= link_to "削除", comic_path(@comic.id), method: :delete, class:"comic-destroy" %>
+       <%=link_to 'もどる',root_path , class:"back-btn" %>
+  </div>
+</div>

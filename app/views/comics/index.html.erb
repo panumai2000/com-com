@@ -8,6 +8,7 @@
   <ul class='comic-lists'>
     <% @comics.each do |comic| %>
       <li class='list'>
+        <%= link_to comic_path(comic.id) do %>
         <div class='comic-img-content'>
           <%= image_tag comic.image, class: "comic-img"%>
         </div>
@@ -29,6 +30,7 @@
         <div>
           <%= comic.end %>
         </div>
+        <% end %>
       </li>
     <% end %>
   </ul>
