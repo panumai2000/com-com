@@ -1,10 +1,11 @@
 <%= render "header" %>
 
-
-<%= link_to( new_comic_path, class: 'purchase-btn') do %>
-  <span>マンガ登録</span>
-<% end %>
-<div class="comic-index">
+<div class='top-image'>
+<div class="bkRGBA">
+  <%= link_to( new_comic_path, class: 'purchase-btn') do %>
+    <span>マンガ登録</span>
+  <% end %>
+  <div class="comic-index">
   <ul class='comic-lists'>
     <% @comics.each do |comic| %>
       <li class='list'>
@@ -12,26 +13,31 @@
         <div class='comic-img-content'>
           <%= image_tag comic.image, class: "comic-img"%>
         </div>
-        <div>
+        <div class='body'>
+          <div class='txst'>
           <span>タイトル：<%= comic.name %></span>
         </div>
-        <div>
+        <div class='txst'>
           <span>最新刊：<%= comic.number %>巻</span>
         </div>
-        <div>
+        <div class='txst'>
           <span>作者：<%= comic.author %></span>
         </div>
-        <div>
+        <div class='txst'>
           <span>雑誌：<%= comic.magazine.name %></span>
         </div>
-        <div>
+        <div class='txst'>
           <span>ジャンル：<%= comic.genre.name %></span>
         </div>
-        <div>
+        <div class='txst'>
           <%= comic.end %>
+       
+          </div>
         </div>
         <% end %>
       </li>
     <% end %>
   </ul>
+    </div>
+  </div>
 </div>
