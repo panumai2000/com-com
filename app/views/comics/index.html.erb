@@ -1,10 +1,23 @@
-<%= render "header" %>
+    <%= link_to "COM✖️COM", root_path, class: :nav__btn %>
+<header class='top-page-header'>
+  <div class='nav'>
+    <%= link_to( new_comic_path, class: 'purchase-btn') do %>
+      <span>マンガ登録</span>
+    <% end %>
+    <ul class='lists-right'>
+      <% if user_signed_in? %>
+        <li><%= link_to current_user.nickname,"#", class: "user-nickname"%> </li> 
+        <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout"%></li>
+      <% else %>
+        <li><%= link_to 'ログイン', new_user_session_path, class: "login" %></li>
+        <li><%= link_to '新規登録', new_user_registration_path, class: "sign-up" %></li>
+      <% end %>
+    </ul>
+  </div>
+</header>
 
 <div class='top-image'>
 <div class="bkRGBA">
-  <%= link_to( new_comic_path, class: 'purchase-btn') do %>
-    <span>マンガ登録</span>
-  <% end %>
   <div class="comic-index">
   <ul class='comic-lists'>
     <% @comics.each do |comic| %>

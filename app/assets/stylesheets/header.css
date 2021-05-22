@@ -1,24 +1,35 @@
 * {
   box-sizing: border-box;
+
 }
 
 .top-page-header {
   width: 100vw;
-  padding: 2vh 15vw;
+  padding: 3vh 15vw;
   display: flex;
   flex-direction: column;
+  background-color: pink;
+
 }
 
+.nav__btn{
+  position: absolute;
+  left: 50%;                 
+  transform:translateX(-50%); 
+  font-weight: bold;
+  color: black;
+  font-size: 50px;
+  text-decoration: none;
+ }
 
 .nav {
   font-size: 18px;
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-start;
   flex-wrap: wrap;
   width: 100%;
   padding: 1vh 0;
 }
-
 
 .brand-list {
   text-decoration: none;
@@ -28,31 +39,74 @@
 .lists-right {
   display: flex;
   list-style: none;
-  align-items: flex-end;
+  align-items: flex-start;
+  position: absolute;
+  top: 20px;
+  right: 50px;
 }
 
+.purchase-btn{
+  text-decoration: none;
+  display: flex;
+  list-style: none;
+  align-items: flex-end;
+  position: absolute;
+  top: 10px;
+  left: 50px;
+  background-color: green;
+  padding: 10px;
+  text-align: center;
+  color: black;
+  width: 120px;
+  font-size: 20px;
+}
 
 .user-nickname {
   text-decoration: none;
   margin-right: 3vw;
-  color: #333333;
   font-weight: bold;
+  border-radius: 10px;
+  background-color: blue;
+  padding: 10px;
+  text-align: center;
+  color: yellow;
+  width: 120px;
 }
-
 
 .logout {
   text-decoration: none;
-  color: #333333;
+  font-weight: bold;
+  border: 3px solid y;
+  border-radius: 10px;
+  background-color: red;
+  padding: 10px;
+  text-align: center;
+  color: yellow;
+  width: 120px;
 }
 
 .login {
   text-decoration: none;
   line-height: 32px;
   margin-right: 3vw;
-  color: #333333;
+  font-weight: bold;
+  border: 3px solid y;
+  border-radius: 10px;
+  background-color: blue;
+  padding: 10px;
+  text-align: center;
+  color: yellow;
+  width: 120px;
 }
 
 .sign-up {
   text-decoration: none;
-  color: #333333;
+  font-weight: bold;
+  border: 3px solid y;
+  border-radius: 10px;
+  background-color: red;
+  padding: 10px;
+  text-align: center;
+  color: yellow;
+  width: 120px;
 }
