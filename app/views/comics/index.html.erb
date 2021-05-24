@@ -7,6 +7,8 @@
     <ul class='lists-right'>
       <% if user_signed_in? %>
         <li><%= link_to current_user.nickname,"#", class: "user-nickname"%> </li> 
+        <script src="./script.js"></script>
+        <i class="fab fa-facebook" hovercolor="#3b5998"></i>
         <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout"%></li>
       <% else %>
         <li><%= link_to 'ログイン', new_user_session_path, class: "login" %></li>
@@ -14,6 +16,33 @@
       <% end %>
     </ul>
   </div>
+  
+<style type="text/css">
+a:link {
+text-decoration:none;
+color:black;
+}
+a:visited {
+text-decoration:none;
+color:black;
+}
+a:active {
+text-decoration:none;
+color:black;
+}
+a:hover {
+text-decoration:none;
+color:#CC0000;
+}
+</style>
+
+<ul id="filterBtnList">
+<li id="filterAll" class="all is_active">ALL</li>
+<li id="filterRed" class="red">RED</li>
+<li id="filterGreen" class="green">GREEN</li>
+<li id="filterBlue" class="blue">BLUE</li>
+</ul>
+
 </header>
 
 <div class='top-image'>
