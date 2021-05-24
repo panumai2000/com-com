@@ -1,9 +1,11 @@
 class ComicsController < ApplicationController
   before_action :authenticate_user!, only: [:new, :create, :edit, :update]
   before_action :set_comic, only: [:show, :edit, :update, :destroy]
+  before_action :search_comic, only: [:index, :search]
 
   def index
     @comics = Comic.all
+
   end
 
   def new
@@ -41,9 +43,17 @@ class ComicsController < ApplicationController
   def edit
   end
 
+  def search
+    @results = @p.result  # 検索条件にマッチした商品の情報を取得
+  end
+
   private
   def comic_params
     params.require(:comic).permit(:image, :name, :genre_id, :magazine_id, :author, :number, :end).merge(user_id: current_user.id)
+  end
+
+  def search_comic
+    @p = Comic.ransack(params[:q])  # 検索オブジェクトを生成
   end
 
   def set_comic

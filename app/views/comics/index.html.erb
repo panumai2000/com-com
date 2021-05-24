@@ -36,12 +36,20 @@ color:#CC0000;
 }
 </style>
 
-<ul id="filterBtnList">
-<li id="filterAll" class="all is_active">ALL</li>
-<li id="filterRed" class="red">RED</li>
-<li id="filterGreen" class="green">GREEN</li>
-<li id="filterBlue" class="blue">BLUE</li>
-</ul>
+<h1>
+  商品検索
+</h1>
+
+
+
+<%= search_form_for @p, url: comics_search_path do |f| %>
+  <%= f.label :genre_id_eq, 'ジャンル' %>
+  <%= f.collection_select :genre_id_eq, Genre.all, :id, :name, include_blank: '指定なし' %>
+  <br>
+  <%= f.submit '検索' %>
+<% end %>
+
+
 
 </header>
 
@@ -79,7 +87,6 @@ color:#CC0000;
         <% end %>
       </li>
     <% end %>
-  </ul>
-    </div>
+
   </div>
 </div>

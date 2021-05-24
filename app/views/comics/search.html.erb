@@ -1,0 +1,101 @@
+   <%= link_to "COM✖️COM", root_path, class: :nav__btn %>
+<header class='top-page-header'>
+  <div class='nav'>
+    <%= link_to( new_comic_path, class: 'purchase-btn') do %>
+      <span>マンガ登録</span>
+    <% end %>
+    <ul class='lists-right'>
+      <% if user_signed_in? %>
+        <li><%= link_to current_user.nickname,"#", class: "user-nickname"%> </li> 
+        <script src="./script.js"></script>
+        <i class="fab fa-facebook" hovercolor="#3b5998"></i>
+        <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout"%></li>
+      <% else %>
+        <li><%= link_to 'ログイン', new_user_session_path, class: "login" %></li>
+        <li><%= link_to '新規登録', new_user_registration_path, class: "sign-up" %></li>
+      <% end %>
+    </ul>
+  </div>
+  
+<style type="text/css">
+a:link {
+text-decoration:none;
+color:black;
+}
+a:visited {
+text-decoration:none;
+color:black;
+}
+a:active {
+text-decoration:none;
+color:black;
+}
+a:hover {
+text-decoration:none;
+color:#CC0000;
+}
+</style>
+
+
+
+<h1>
+  検索結果
+</h1>
+</header>
+
+<div class='top-image'>
+<div class="bkRGBA">
+  <div class="comic-index">
+    <ul class='comic-lists'>
+<%# 検索結果の個数で条件分岐 %>
+
+<%  @results.each do |comic| %>
+
+
+  <%# 商品一覧 %>
+
+
+      <%# 商品のインスタンス変数になにか入っている場合、中身のすべてを展開できるようにしましょう %>
+
+      <li class='list'>
+        <%= link_to comic_path(comic.id) do %>
+        <div class='comic-img-content'>
+          <%= image_tag comic.image , class: "comic-img" if comic.image.attached? %>
+        </div>
+       <div class='body'>
+        <div class='text'>
+            <%= comic.name %>
+          <div class='text'>
+            <%= comic.number%>
+          </div>
+          <div class='text'>
+            <% if comic.author %>
+            産地 <%= comic.author%>              
+            <% end %>
+          </div>
+          <div class='text'>
+            <% if comic.magazine%>
+            コク <%= comic.magazine.name %>
+            <% end %>
+          </div>
+          <div class='text'>
+            <% if comic.genre %>
+              酸味 <%= comic.genre.name%>
+            <% end %>
+          </div>
+          <div class='text'>
+            <% if comic.end%>
+              加工法 <%= comic.end%>
+            <% end %>
+          </div>
+        </div>
+
+
+  <%end%>
+</li>
+<% end %>
+
+
+
+<br>
+<%= link_to 'トップページへ戻る', root_path %>
