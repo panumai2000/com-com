@@ -64,28 +64,28 @@ color:#CC0000;
         </div>
        <div class='body'>
         <div class='text'>
-            <%= comic.name %>
+            タイトル：<%= comic.name %>
           <div class='text'>
-            <%= comic.number%>
+           最新刊：<%= comic.number%>
           </div>
           <div class='text'>
             <% if comic.author %>
-            産地 <%= comic.author%>              
+            作者：<%= comic.author%>              
             <% end %>
           </div>
           <div class='text'>
             <% if comic.magazine%>
-            コク <%= comic.magazine.name %>
+            雑誌：<%= comic.magazine.name %>
             <% end %>
           </div>
           <div class='text'>
             <% if comic.genre %>
-              酸味 <%= comic.genre.name%>
+              ジャンル：<%= comic.genre.name%>
             <% end %>
           </div>
           <div class='text'>
             <% if comic.end%>
-              加工法 <%= comic.end%>
+               <%= comic.end%>
             <% end %>
           </div>
         </div>
