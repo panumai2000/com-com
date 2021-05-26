@@ -5,7 +5,10 @@
   background-image: image-url("1680x1050_5.jpg")!important;
   background-size: cover;
   background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
   position: relative;
+  
 }
 
 .bkRGBA{

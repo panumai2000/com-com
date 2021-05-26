@@ -1,0 +1,109 @@
+.cp_iptxt {
+	position: relative;
+	width: 20%;
+  display: flex;
+  justify-content: center;
+}
+
+.top-new-image {
+  width: 100%;
+  height: 100vh;
+  background-image: url("46-465589_download-feature-anime-characters-wallpaper-in-resolution-10.jpeg")!important;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+  position: relative;
+  
+}
+
+.bkRGBA{
+  height: 100%;
+  background: rgba(255,255,255,0.3);
+}
+
+.title{
+  display: flex;
+  justify-content: center;
+  font-weight: bolder;
+  font-size: 50px;
+  padding-top: 20px;
+  color:yellow;
+}
+
+.content{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  font-weight:  bold;
+}
+
+.image-up {
+  display: flex;
+  justify-content: center;
+  min-width: 250px;
+
+}
+
+
+
+.cp_iptxt input[type='text'] {
+	font: 15px/24px sans-serif;
+	box-sizing: border-box;
+	width: 100%;
+	padding: 0.3em;
+	transition: 0.3s;
+	letter-spacing: 1px;
+	color: #aaaaaa;
+	border: 5px solid rgb(0, 183, 255);
+	border-radius: 4px;
+  margin: 40px 0%;
+
+}
+.ef input[type='text']:focus {
+	border: 1px solid #da3c41;
+	outline: none;
+	box-shadow: 0 0 5px 1px rgba(218,60,65, .5);
+}
+
+.select-box {
+  height: 40px;
+  width: 100%;
+  font: 15px/24px sans-serif;
+	box-sizing: border-box;
+	width: 100%;
+  background-color:white;
+  border: 5px solid rgb(0, 183, 255);
+  margin-bottom: 50px;
+}
+
+.sell-btn {
+  background: rgb(0, 81, 255);
+  border: 1px solid rgb(0, 81, 255);
+  color: #fff;
+  width: 100%;
+  height: 50px;
+  font-size: 30px;
+  margin-bottom: 4vh;
+}
+
+.btn--radius {
+  border-radius: 100vh;
+}
+.back-btn-new {
+
+  background: #aaa;
+  border: 1px solid #aaa;
+  color: #fff;
+  font-size: 15px;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+}

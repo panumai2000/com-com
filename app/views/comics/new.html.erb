@@ -1,11 +1,41 @@
-<%= form_with model: @comic, url:comics_path, local: true do |f| %>
-  <%= f.text_field :name, placeholder: "name" %>
-  <%= f.file_field :image, id:"image" %>
-  <%= f.collection_select(:genre_id, Genre.all, :id, :name, {}, {class:"genre-select"}) %>
-  <%= f.collection_select(:magazine_id, Magazine.all, :id, :name, {}, {class:"magazine-select"}) %>
-  <%= f.text_field :author, placeholder: "作者名" %>
-  <%= f.text_field :number, placeholder: "巻数" %>
-  <%= f.select :end, [["完",],["未完"]]%>
-  <%= f.submit "SEND" %>
+<div class='top-new-image'>
+<div class="bkRGBA">
+<h1 class='title'>マンガ登録</h1>
+<div class="content">
+<div class="cp_iptxt">
 
-<% end %>
+  <%= form_with model:@comic, url:comics_path, local: true do |f| %>
+      <label class="image">
+            <p>
+            
+          マンガ画像をアップロードしてください
+        </p>
+          <%= f.file_field :image, class:"image-up", id:"image" %>
+          	  </label>
+    <label class="ef">
+      <%= f.text_field :name, class:"cp_iptxt input", id:"name", placeholder:"タイトル" %>
+	  </label>
+        <label class="ef">
+      <%= f.text_field :number, class:"cp_iptxt input", id:"number", placeholder:"巻数" %>
+	  </label>
+            <label class="ef">
+      <%= f.text_field :author, class:"cp_iptxt input", id:"author", placeholder:"作者" %>
+	  </label>
+                    <label class="ef">
+        <%= f.collection_select(:magazine_id, Magazine.all, :id, :name, {}, {class:"select-box" })  %>
+        </label>
+                <label class="ef">
+        <%= f.collection_select(:genre_id, Genre.all, :id, :name, {}, {class:"select-box" })  %>
+        </label>
+  <label class="ef">
+         <%= f.select :end, [["完",],["未完"]], {}, {class: 'select-box'} %>
+ </label>
+     <div class="sell-btn-contents">
+      <%= f.submit "登録" ,class:"sell-btn btn--radius" %>
+      <%=link_to 'もどる', root_path, class:"back-btn-new" %>
+    </div>
+  <% end %>
+  </div>
+  </div>
+  </div>
+</div>

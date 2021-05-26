@@ -1,6 +1,6 @@
 class Magazine < ActiveHash::Base
   self.data = [
-    { id: 1, name: '--' },
+    { id: 1, name: '雑誌' },
     { id: 2, name: '週刊少年ジャンプ' },
     { id: 3, name: 'ジャンプSQ' },
     { id: 4, name: 'ヤングジャンプ' },
