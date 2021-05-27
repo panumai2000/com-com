@@ -2,50 +2,54 @@
 .top-image {
   width: 100%;
   height: 100vh;
-  background-image: image-url("1680x1050_5.jpg")!important;
+  background-image: image-url("1680x1050_5.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center center;
   position: relative;
-  
+
 }
 
 .bkRGBA{
   height: 100%;
   background: rgba(255,255,255,0.5);
+
 }
 
-.comic-index{
-  position: absolute;
-  background-color: #FFF;
+.comic-contents{
   display: flex;
   flex-direction: column;
+  align-items: center;
   padding: 10vh 0;
-
 }
 
 .comic-lists{
-  position: absolute;
   width: 100vw;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: center;
+
 
 }
 
 .comic-lists>.list {
+
   width: 37vh;
   padding: 1vw;
-  background-color: #FFF;
+  margin-left: 1vw;
+background-color: white;
 
 }
+
+
 
 .comic-img-content {
   position: relative;
-  background-color: #FFF;
 }
 
+.txst{
+  font-size: 20px;
+  color: black;
+}
 
 
 .comic-img {

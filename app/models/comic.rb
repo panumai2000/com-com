@@ -11,6 +11,7 @@ class Comic < ApplicationRecord
     validates :author
     validates :number, numericality: true
     validates :end
+    validates :image
 
     with_options numericality: { other_than: 1 } do
       validates :genre_id

@@ -1,5 +1,5 @@
 
-.top-image {
+.top-image-search {
   width: 100%;
   height: 100vh;
   background-image: image-url('20190405231506.png');
@@ -13,41 +13,44 @@
   background: rgba(255,255,255,0.5);
 }
 
-.comic-index{
-  position: absolute;
-  background-color: #FFF;
+.comic-contents-search{
   display: flex;
   flex-direction: column;
+  align-items: center;
   padding: 10vh 0;
-
 }
 
-.comic-lists{
-  position: absolute;
+.comic-lists-search{
   width: 100vw;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: center;
+
 
 }
 
-.comic-lists>.list {
+.comic-lists-search>.list-search{
+
   width: 37vh;
   padding: 1vw;
-  background-color: #FFF;
+  margin-left: 1vw;
+background-color: white;
 
 }
 
-.comic-img-content {
+
+
+.comic-img-content-search {
   position: relative;
-  background-color: #FFF;
+}
+
+.txst{
+  font-size: 20px;
+  color: black;
 }
 
 
-
-.comic-img {
+.comic-img-search {
   width: 33vh;
   height: 33vh;
 }
-
-

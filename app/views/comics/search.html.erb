@@ -43,10 +43,10 @@ color:#CC0000;
 </h1>
 </header>
 
-<div class='top-image'>
+<div class='top-image-search'>
 <div class="bkRGBA">
-  <div class="comic-index">
-    <ul class='comic-lists'>
+  <div class="comic-contents-search">
+    <ul class='comic-lists-search'>
 <%# 検索結果の個数で条件分岐 %>
 
 <%  @results.each do |comic| %>
@@ -57,10 +57,10 @@ color:#CC0000;
 
       <%# 商品のインスタンス変数になにか入っている場合、中身のすべてを展開できるようにしましょう %>
 
-      <li class='list'>
+      <li class='list-search'>
         <%= link_to comic_path(comic.id) do %>
-        <div class='comic-img-content'>
-          <%= image_tag comic.image , class: "comic-img" if comic.image.attached? %>
+        <div class='comic-img-content-search'>
+          <%= image_tag comic.image , class: "comic-img-search" if comic.image.attached? %>
         </div>
        <div class='body'>
         <div class='text'>
