@@ -55,3 +55,18 @@
   margin: 20px 0px;
   padding: 2vh 10vw;
 }
+
+.comic-btn {
+  background: rgb(255, 238, 0);
+  border: 3px solid red;
+  color: #fff;
+  width: 10%;
+  height: 50px;
+  font-size: 28px;
+  margin-bottom: 4vh;
+  border-radius: 100vh;
+  color: black;
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+}
