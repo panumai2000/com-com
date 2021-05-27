@@ -1,5 +1,9 @@
 .comic-show {
-  background-color: #f8f8f8;
+  background-image: url("hotel-wallpaper.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
   width: 100vw;
   display: flex;
   flex-direction: column;
@@ -8,7 +12,7 @@
 }
 
 .comic-box {
-  background-color: #FFF;
+
   width: 70vw;
   min-width: 1200px;
   padding: 10vh 15vw;
@@ -19,23 +23,24 @@
 
 
 .comic-box-img {
-  height: 50vh;
-  width: 60vw;
+  height: 80vh;
+  width: 800vw;
   min-height: 500px;
-  background-color: rgb(205, 202, 202);
   object-fit: contain;
+  margin-bottom: 30px;
 }
 
 .detail-table {
   margin-bottom: 30px;
-  width: 100%;
+  width: 80%;
+  background-color: white;
 }
 
 .detail-comic {
   width: 20%;
   background-color: #eee;
   border: 1px solid #dedede;
-  font-size: 14px;
+  font-size: 20px;
   text-align: center;
 }
 
@@ -43,7 +48,7 @@
   width: 80%;
   padding: 20px;
   border: 1px solid #dedede;
-  font-size: 14px;
+  font-size: 25px;
   text-align: center;
 }
 
