@@ -51,6 +51,15 @@ HTML,CSS
 ## 🔸データベース
 MySQL,SequelPro
 
+## 🔸インフラ
+AWS(EC2),Capistrano,Docker(開発環境)
+
+## 🔸アプリケーションサーバ(本番環境)
+unicorn
+
+## 🔸ソール管理
+GitHub,GitHubDesktop
+
 ## 🔸エディタ
 VSCode
 
