@@ -60,6 +60,9 @@ unicorn
 ## 🔸ソール管理
 GitHub,GitHubDesktop
 
+## 🔸テスト
+RSpec
+
 ## 🔸エディタ
 VSCode
 
